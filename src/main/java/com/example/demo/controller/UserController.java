@@ -24,5 +24,9 @@ public class UserController {
 	    public User requestUser(@RequestBody User user) {
 	        return userService.save(user);
 	    }
+	    @RequestMapping(value = "/hey", method= RequestMethod.GET)
+	    public String sayHey(){
+	       return "hello";
+	    }
 
 }
